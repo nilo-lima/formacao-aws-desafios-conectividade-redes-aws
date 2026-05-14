@@ -111,7 +111,5 @@ _Preenchido após conclusão do último desafio._
 
 ## 🔗 Links Úteis
 
-- [Planilha-fonte (sources/)](./sources/)
 - [README do monorepo](./README.md)
-- [Constituição Claude Code](./CLAUDE.md)
 - [Padrão de Tags AWS](./docs/AWS_TAGGING.md)

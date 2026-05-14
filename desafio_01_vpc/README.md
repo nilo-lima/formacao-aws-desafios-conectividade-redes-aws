@@ -197,7 +197,7 @@ Perguntas usadas para auditar a infraestrutura após o deploy:
 - [x] Fase 2 — Terraform (9 recursos)
 - [x] Fase 4 — Validação (SSM + curl + docker ps)
 - [x] Fase 5 — Documentação & Publicação
-- [ ] `make destroy` após publicação
+- [x] `make destroy` após publicação
 - [ ] Desafio 02 — VPC + ECS público (multi-AZ, alta disponibilidade)
 
 ## 🎓 Lições Aprendidas

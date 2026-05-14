@@ -109,3 +109,6 @@ desafio_*/CLAUDE.md
 
 # ─── Screenshots / evidências (binários grandes, não são código) ──────────────
 **/docs/PRINTS/
+
+# ─── Outros arquivos temporários ou de configuração local ─────────────────────────────
+source/*.xlsx

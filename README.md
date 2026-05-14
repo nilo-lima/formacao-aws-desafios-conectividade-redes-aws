@@ -62,7 +62,7 @@ desafios_maio_2026/
 │   ├── scripts/                  # automações locais
 │   ├── Makefile                  # atalhos
 │   └── README.md                 # README de elite (13 seções)
-├── sources/                      # Planilha original + guia da VM Vagrant
+├── sources/                      # guia da VM Vagrant
 ├── Vagrantfile / setup.sh        # Estação de trabalho isolada (Debian 12)
 ├── Makefile                      # Controle global do monorepo
 ├── PROJECTS.md                   # Dashboard de progresso
@@ -143,32 +143,6 @@ Todo recurso provisionado carrega **7 tags Well-Architected** obrigatórias:
 | `Challenge` | `mai2026-desafio-NN` | Isola por desafio no Cost Explorer |
 | `CostCenter` | `formacao-aws-mai2026` | Agrupa custos do mês |
 | `AutoShutdown` | `true` | Habilita rotina de desligamento |
-
-> 📖 Detalhes em [docs/AWS_TAGGING.md](./docs/AWS_TAGGING.md).
-
----
-
-## 💰 Controle de Custos
-
-- **AWS Budgets** com alerta a partir de US$ 10/mês
-- **Cost Explorer** consultado via tag `CostCenter=formacao-aws-mai2026`
-- **AutoShutdown** noturno (futuro) para EC2/RDS com tag `AutoShutdown=true`
-- **Cleanup obrigatório** ao final de cada desafio: `make destroy` + verificação de órfãos
-
-> 📖 Política completa em [docs/COST_CONTROL.md](./docs/COST_CONTROL.md).
-
----
-
-## 🤖 Perguntas para o Kiro
-
-Cada desafio gera um arquivo `docs/KIRO_PERGUNTAS.md` com perguntas categorizadas em:
-
-1. **🔍 Verificação de recursos** — auditoria por tag
-2. **💰 Custos & FinOps** — Cost Explorer drill-down
-3. **📊 Uso & Performance** — CloudWatch metrics
-4. **🛡️ Segurança & Compliance** — IAM, SGs, dados sensíveis
-
-> 📖 Banco mestre em [docs/KIRO_QUESTIONS.md](./docs/KIRO_QUESTIONS.md).
 
 ---
 

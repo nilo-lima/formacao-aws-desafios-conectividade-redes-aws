@@ -8,7 +8,6 @@ Obrigado pelo interesse em contribuir com este monorepo de laboratórios AWS!
 
 - Leia o [`README.md`](README.md) para entender a estrutura do projeto.
 - Leia o [`PROJECTS.md`](PROJECTS.md) para ver o status atual dos desafios.
-- Consulte o [`CLAUDE.md`](CLAUDE.md) para entender as regras e padrões obrigatórios.
 
 ---
 
@@ -21,7 +20,6 @@ formacao-aws-desafios-conectividade-redes-aws/   ← raiz do GitHub
 ├── CONTRIBUTING.md    # Este arquivo
 ├── LICENSE            # Apache 2.0
 ├── .gitignore         # Ignora tfstate, .env, *.pem, .terraform/, etc.
-├── CLAUDE.md          # Constituição do Claude Code (padrões e fluxos)
 ├── Makefile           # Targets globais: vm-up, lint, cost-report, destroy-all
 ├── Vagrantfile        # VM Debian 12 isolada para execução dos labs
 ├── setup.sh           # Provisionamento da VM (Terraform, Ansible, Docker, etc.)
@@ -34,7 +32,7 @@ formacao-aws-desafios-conectividade-redes-aws/   ← raiz do GitHub
 │   └── templates/     # esqueletos para novos desafios
 ├── sources/           # Planilha-fonte da formação
 └── desafio_NN_slug/   # Um diretório por desafio (01 a 06)
-    ├── ai/            # PRD.md, CLAUDE.md local, ADRs
+    ├── ai/ADR/        # Architecture Decision Records
     ├── terraform/     # IaC (consome shared/modules)
     ├── docs/          # architecture.png, BLOG_POST, SLIDES, KIRO, CUSTOS
     ├── scripts/       # user_data, validate, cleanup
@@ -102,7 +100,7 @@ infra(shared/modules): adicionar módulo alb para desafio 02
 
 1. **Fork** o repositório.
 2. Crie uma branch descritiva: `feat/desafio-02-ecs` ou `fix/vpc-module-outputs`.
-3. Siga os padrões do `CLAUDE.md` (tags, estrutura de diretórios, commits).
+3. Siga os padrões deste `CONTRIBUTING.md` (tags, estrutura de diretórios, commits).
 4. Execute localmente antes de abrir o PR:
    ```bash
    terraform fmt -recursive
