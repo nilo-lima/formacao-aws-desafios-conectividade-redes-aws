@@ -1,0 +1,111 @@
+# ─── Terraform ────────────────────────────────────────────────────────────────
+**/.terraform/
+**/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ⚠️ tfvars contém senhas — só o exemplo vai pro Git
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# ─── Ansible ──────────────────────────────────────────────────────────────────
+*.retry
+.vault_pass.txt
+vault_password_file
+
+# ─── Vagrant / VirtualBox ─────────────────────────────────────────────────────
+.vagrant/
+*.box
+ubuntu-xenial-*-cloudimg-console.log
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+.docker/
+
+# ─── Python (diagrams) ────────────────────────────────────────────────────────
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# ─── Node.js ──────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+.pnpm-debug.log*
+
+# ─── Secrets & Credentials ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+*.p12
+secrets.yaml
+credentials.json
+*.kubeconfig
+aws_credentials
+
+# ─── IDE / OS ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Logs & temp ──────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.cache
+
+# ─── Backup pré-scaffold (mantém local, fora do repo) ────────────────────────
+.backup_pre_scaffold_*/
+
+# ─── Diagramas gerados (são commitados após geração) ─────────────────────────
+# Não ignorar architecture.png — deve ser versionado como evidência
+# Mas ignorar arquivos auxiliares do graphviz
+*.dot
+
+# ─── AWS CLI / Boto3 cache ────────────────────────────────────────────────────
+.aws-sam/
+
+# ─── Diretórios de ferramentas (Claude Code, Kiro) ───────────────────────────
+**/.claude/
+**/.kiro/
+CLAUDE.md
+
+# ─── Arquivos internos de IA / planejamento (não são código) ─────────────────
+# ADRs são mantidos (ai/ADR/) — apenas os demais arquivos de ai/ são ignorados
+**/ai/CLAUDE.md
+**/ai/PRD.md
+**/ai/PROMPTS.md
+**/ai/SKILLS.md
+**/ai/MCP.md
+
+# CLAUDE.md dos desafios (raiz do monorepo é mantida — é documentação do projeto)
+desafio_*/CLAUDE.md
+
+# ─── Documentação pessoal / conteúdo de publicação ───────────────────────────
+**/docs/BLOG_POST.md
+**/docs/SLIDES_ROTEIRO.md
+**/docs/KIRO_PERGUNTAS.md
+**/docs/CUSTOS.md
+
+# ─── Screenshots / evidências (binários grandes, não são código) ──────────────
+**/docs/PRINTS/

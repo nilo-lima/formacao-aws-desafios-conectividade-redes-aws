@@ -1,0 +1,7 @@
+# Renomeie para terraform.tfvars e ajuste os valores (NÃO COMMITAR)
+
+region           = "us-east-1"
+challenge_number = "01"
+ec2_instance_type = "t3.micro"
+
+# ec2_ami = ""  # vazio = usa AMI Amazon Linux 2023 mais recente via data source
