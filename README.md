@@ -1,7 +1,7 @@
 # 🚀 Formação AWS 5.0 · Desafio Labs 2.0 · Mai/2026
 
 > **Conectividade e Redes na AWS** — 6 desafios práticos com IaC, automação e documentação de elite.
-> Monorepo orquestrado por **Claude Code** em modo Mentor Híbrido.
+> Monorepo com estrutura modular, ADRs e padrões Well-Architected aplicados em cada desafio.
 
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC?logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![Ansible](https://img.shields.io/badge/Config-Ansible-EE0000?logo=ansible&logoColor=white)](https://www.ansible.com/)
@@ -23,7 +23,7 @@ Cada desafio é um projeto autocontido, com:
 - ✅ **Diagramas profissionais** (Python `diagrams` + ícones oficiais AWS)
 - ✅ **Documentação de elite** (README canônico em 13 seções)
 - ✅ **Evidências completas** (prints do console, custos reais, smoke tests)
-- ✅ **Inteligência embarcada** (`CLAUDE.md`, `PRD.md`, ADRs, prompts)
+- ✅ **Decisões documentadas** (ADRs numerados, justificativa técnica por desafio)
 
 ---
 
@@ -46,7 +46,6 @@ Cada desafio é um projeto autocontido, com:
 
 ```text
 desafios_maio_2026/
-├── .claude/                      # Constituição + slash commands Claude Code
 ├── docs/                         # Padrões compartilhados (arquitetura, tagging, FinOps)
 ├── shared/                       # Módulos Terraform + playbooks Ansible + scripts
 │   ├── modules/                  # vpc, bia-baseline, ecs-fargate, nat-gateway, vpc-endpoints
@@ -55,33 +54,32 @@ desafios_maio_2026/
 │   ├── python/                   # helpers diagrams + boto3
 │   └── templates/                # esqueletos para novos desafios
 ├── desafio_NN_slug/              # 6 pastas, uma por desafio
-│   ├── ai/                       # CLAUDE.md, PRD.md, ADRs locais
+│   ├── ai/ADR/                   # Architecture Decision Records (justificativa técnica)
 │   ├── terraform/                # IaC (consome shared/modules)
 │   ├── ansible/                  # configuração pós-deploy
 │   ├── docker/                   # compose para BIA local
-│   ├── docs/                     # architecture.py, PRINTS/, BLOG_POST, SLIDES, KIRO
+│   ├── docs/                     # architecture.py + architecture.png
 │   ├── scripts/                  # automações locais
 │   ├── Makefile                  # atalhos
-│   └── README.md                 # README de elite (gerado na F5)
+│   └── README.md                 # README de elite (13 seções)
 ├── sources/                      # Planilha original + guia da VM Vagrant
 ├── Vagrantfile / setup.sh        # Estação de trabalho isolada (Debian 12)
 ├── Makefile                      # Controle global do monorepo
 ├── PROJECTS.md                   # Dashboard de progresso
-├── CLAUDE.md                     # Constituição do Claude Code
 └── README.md                     # Este arquivo
 ```
 
 ---
 
-## 🧠 Inteligência Claude Code
+## 📐 Decisões de Arquitetura (ADRs)
 
-Este monorepo é projetado para uso intensivo do **Claude Code** como mentor técnico:
+Cada desafio documenta as escolhas técnicas em `ai/ADR/` com ADRs numerados:
 
-- **`CLAUDE.md` raiz:** constituição global, fluxo de 5 fases, permissões executivas, padrões IaC.
-- **`CLAUDE.md` por desafio:** persona específica, critérios de aceite, lições aprendidas.
-- **Slash commands:** `/novo-desafio`, `/plan-arquitetura`, `/deploy-aws`, `/destroy-aws`, `/publicar-desafio`.
-- **PRD por desafio:** objetivo, KRs, escopo, fora de escopo, riscos.
-- **ADRs numerados:** justificativa técnica de cada decisão de arquitetura.
+- **O que foi decidido** — qual abordagem foi adotada e por quê
+- **Alternativas consideradas** — o que foi descartado e a razão
+- **Consequências** — trade-offs positivos e negativos da decisão
+
+Os ADRs são versionados junto ao código e permitem entender, meses depois, **por que** determinada abordagem foi escolhida em vez de outra.
 
 ---
 
@@ -111,7 +109,7 @@ make help
 # Entrar em um desafio e ver atalhos locais
 cd desafio_01_vpc && make help
 
-# Fluxo típico (executado pelo Claude Code com aprovações)
+# Fluxo típico
 make init plan          # inicializa + mostra plano
 make apply              # aplica (pede confirmação)
 make diagram            # gera architecture.png
@@ -210,10 +208,7 @@ Distribuído sob a licença **Apache 2.0**. Esta licença oferece permissão par
 
 <div align="center">
   <sub>
-    Monorepo construído com
-    <a href="https://www.anthropic.com/claude-code">Claude Code</a>
-    no padrão
-    <a href="https://github.com/nilo-lima/DevOps_Master_Lab">DevOps Master Lab</a>
+    <a href="https://github.com/nilo-lima/formacao-aws-desafios-conectividade-redes-aws">formacao-aws-desafios-conectividade-redes-aws</a>
     · Mentoria
     <a href="https://hotmart.com/pt-br/club/formacaoaws">Formação AWS 5.0 — Henrylle Maia</a>
   </sub>
