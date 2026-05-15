@@ -10,13 +10,13 @@
 
 | Status | Quantidade | % |
 |---|:---:|:---:|
-| ✅ Concluído | 1 | 17% |
+| ✅ Concluído | 2 | 33% |
 | 🔵 Em andamento | 0 | 0% |
-| 🟡 Aguardando | 5 | 83% |
+| 🟡 Aguardando | 4 | 67% |
 | ❌ Bloqueado | 0 | 0% |
 
 ```
-███░░░░░░░░░░░░░░░░░  1/6  (17%)
+██████░░░░░░░░░░░░░░  2/6  (33%)
 ```
 
 ---
@@ -35,7 +35,7 @@
 - **Custo real:** ~$0.03 (sessão ~2h)
 - **Repositório:** [formacao-aws-desafios-conectividade-redes-aws](https://github.com/nilo-lima/formacao-aws-desafios-conectividade-redes-aws)
 
-### 🟡 Desafio 02 — VPC + Subnet Pública + ECS
+### ✅ Desafio 02 — VPC + Subnet Pública + ECS
 
 - **Pasta:** [`desafio_02_ecs_publico/`](./desafio_02_ecs_publico/)
 - **Nível:** ⭐⭐ (2/3)
@@ -43,7 +43,10 @@
 - **Data limite do post:** 25/05/2026
 - **Carga estudo:** 1d 3h41
 - **Objetivo:** BIA no ECS em VPC customizada com 2 AZs, alta disponibilidade.
-- **Status:** 🟡 Aguardando
+- **Status:** ✅ Concluído (2026-05-15)
+- **Custo real:** ~$0.23 (sessão ~3h)
+- **Recursos provisionados:** 45 (terraform apply)
+- **Destaques:** ECS EC2 launch type + Capacity Provider + ASG + ALB + RDS + patch VITE_API_URL
 
 ### 🟡 Desafio 03 — EC2 + SSH + SSM + Instance Connect
 
@@ -92,7 +95,7 @@
 | Desafio | Estimado | Real | Período Ativo |
 |---|---:|---:|:---:|
 | 01 | $0.03 | ~$0.03 | 2026-05-13 (~2h) |
-| 02 | - | - | - |
+| 02 | $0.24 | ~$0.23 | 2026-05-15 (~3h) |
 | 03 | - | - | - |
 | 04 | - | - | - |
 | 05 | - | - | - |
