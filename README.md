@@ -32,7 +32,7 @@ Cada desafio é um projeto autocontido, com:
 | # | Serviço | Nível | Data Limite | Status |
 |---|---|:---:|---|:---:|
 | [01](./desafio_01_vpc/) | VPC + Subnet Pública | 1 | 18/05/2026 | ✅ Concluído |
-| [02](./desafio_02_ecs_publico/) | VPC + Subnet Pública + ECS | 2 | 25/05/2026 | 🟡 Aguardando |
+| [02](./desafio_02_ecs_publico/) | VPC + Subnet Pública + ECS | 2 | 25/05/2026 | ✅ Concluído |
 | [03](./desafio_03_ec2_ssm_ssh/) | EC2 + VPC + SSH + SSM + Instance Connect | 2 | 01/06/2026 | 🟡 Aguardando |
 | [04](./desafio_04_nat_gateway/) | NAT Gateway | 2 | 08/06/2026 | 🟡 Aguardando |
 | [05](./desafio_05_vpc_peering/) | VPC + VPC Peering | 3 | 08/06/2026 | 🟡 Aguardando |
