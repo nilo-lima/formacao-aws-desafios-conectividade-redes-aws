@@ -37,7 +37,7 @@ formacao-aws-desafios-conectividade-redes-aws/   ← raiz do GitHub
     ├── docs/          # architecture.png, BLOG_POST, SLIDES, KIRO, CUSTOS
     ├── scripts/       # user_data, validate, cleanup
     ├── Makefile       # Targets locais do desafio
-    ├── .gitignore     # (herdado do raiz — pode ter adições locais)
+    ├── .gitignore     # (herdado do raiz - pode ter adições locais)
     └── README.md      # README de elite em 13 seções canônicas
 ```
 
@@ -46,9 +46,9 @@ formacao-aws-desafios-conectividade-redes-aws/   ← raiz do GitHub
 ## ✅ O que pode ser contribuído
 
 - **Correções de bugs** no Terraform, scripts ou documentação.
-- **Melhorias nos módulos `shared/`** — retrocompatíveis e com testes.
+- **Melhorias nos módulos `shared/`** - retrocompatíveis e com testes.
 - **Novos templates** em `shared/templates/`.
-- **Atualização de documentação** — README, ADRs, BLOG_POST.
+- **Atualização de documentação** - README, ADRs, BLOG_POST.
 - **Tradução ou melhoria das perguntas Kiro** em `docs/KIRO_QUESTIONS.md`.
 
 ---
@@ -108,7 +108,7 @@ infra(shared/modules): adicionar módulo alb para desafio 02
    # tflint e tfsec se disponíveis
    ```
 5. Abra o PR com descrição clara: **o quê**, **por quê** e **como testar**.
-6. Aguarde revisão — PRs sem `terraform validate` passando serão fechados.
+6. Aguarde revisão - PRs sem `terraform validate` passando serão fechados.
 
 ---
 
@@ -123,12 +123,21 @@ git tag v02-ecs -m "Desafio 02 concluído: ECS Fargate Multi-AZ"
 
 ---
 
+## 📄 Padrões de Texto e Markdown
+
+- **Caractere `—` (em dash, U+2014) proibido** em todos os arquivos `.md` do repositório.
+  Motivo: causa erros em campos AWS (SG descriptions, IAM) e inconsistencia visual entre editores.
+  Substituto: use `-` (hifen simples) ou `:` conforme o contexto.
+- Verificar antes de commitar: `grep -rn "—" *.md`
+
+---
+
 ## 🛡️ Padrões de Segurança Inegociáveis
 
 - **Nunca** commitar `*.tfvars` com senhas (use `*.tfvars.example`).
 - **Nunca** commitar `*.pem`, `*.key` ou `credentials.json`.
 - **IMDSv2 obrigatório** em todas as EC2 (`http_tokens = "required"`).
-- **Porta 22 não exposta** — acesso via SSM Session Manager.
+- **Porta 22 não exposta** - acesso via SSM Session Manager.
 - **7 tags Well-Architected** em 100% dos recursos Terraform.
 
 ---
@@ -139,4 +148,4 @@ Abra uma **Issue** com o label `question` descrevendo sua dúvida.
 
 ---
 
-> Projeto da **Formação AWS 5.0 — Mentoria Desafio Labs 2.0** · Mentor: Henrylle Maia
+> Projeto da **Formação AWS 5.0 - Mentoria Desafio Labs 2.0** · Mentor: Henrylle Maia

@@ -1,6 +1,6 @@
 # 🚀 Formação AWS 5.0 · Desafio Labs 2.0 · Mai/2026
 
-> **Conectividade e Redes na AWS** — 6 desafios práticos com IaC, automação e documentação de elite.
+> **Conectividade e Redes na AWS** - 6 desafios práticos com IaC, automação e documentação de elite.
 > Monorepo com estrutura modular, ADRs e padrões Well-Architected aplicados em cada desafio.
 
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC?logo=terraform&logoColor=white)](https://www.terraform.io/)
@@ -75,9 +75,9 @@ desafios_maio_2026/
 
 Cada desafio documenta as escolhas técnicas em `ai/ADR/` com ADRs numerados:
 
-- **O que foi decidido** — qual abordagem foi adotada e por quê
-- **Alternativas consideradas** — o que foi descartado e a razão
-- **Consequências** — trade-offs positivos e negativos da decisão
+- **O que foi decidido** - qual abordagem foi adotada e por quê
+- **Alternativas consideradas** - o que foi descartado e a razão
+- **Consequências** - trade-offs positivos e negativos da decisão
 
 Os ADRs são versionados junto ao código e permitem entender, meses depois, **por que** determinada abordagem foi escolhida em vez de outra.
 
@@ -184,6 +184,6 @@ Distribuído sob a licença **Apache 2.0**. Esta licença oferece permissão par
   <sub>
     <a href="https://github.com/nilo-lima/formacao-aws-desafios-conectividade-redes-aws">formacao-aws-desafios-conectividade-redes-aws</a>
     · Mentoria
-    <a href="https://hotmart.com/pt-br/club/formacaoaws">Formação AWS 5.0 — Henrylle Maia</a>
+    <a href="https://hotmart.com/pt-br/club/formacaoaws">Formação AWS 5.0 - Henrylle Maia</a>
   </sub>
 </div>

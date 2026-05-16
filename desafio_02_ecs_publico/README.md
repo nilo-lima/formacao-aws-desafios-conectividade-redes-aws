@@ -62,11 +62,11 @@ flowchart LR
 
 ## 🧠 Decisões Técnicas (ADRs)
 
-- **ADR-001 — EC2 launch type, não Fargate:** Escolha deliberada para aprender a configurar Capacity Provider, ASG e ECS agent nas instâncias EC2. Fargate seria mais simples, mas abstrai conceitos importantes cobrados no desafio 04.
-- **ADR-002 — VITE_API_URL baked no build:** O React (Vite) compila variáveis de ambiente em arquivos estáticos. Não é possível injetar `VITE_API_URL` em runtime — ela precisa ser definida como `ARG` no Dockerfile e passada via `--build-arg` no momento do build.
-- **ADR-003 — ALB DNS como VITE_API_URL:** Usar o DNS do ALB garante que o frontend acesse a API via load balancer (alta disponibilidade), não via IP fixo de uma task específica.
-- **ADR-004 — RDS Single-AZ em lab:** Multi-AZ duplicaria o custo do RDS (~$0.034/h → ~$0.068/h) sem benefício real para um lab de curta duração. O PRD prevê `desired_count=2` para as tasks, não para o banco.
-- **ADR-005 — bia-dev em subnet pública:** Sem NAT Gateway neste desafio, a instância de build precisa de acesso à internet direto (subnet pública + public IP) para fazer pull do repo GitHub e push para ECR.
+- **ADR-001 - EC2 launch type, não Fargate:** Escolha deliberada para aprender a configurar Capacity Provider, ASG e ECS agent nas instâncias EC2. Fargate seria mais simples, mas abstrai conceitos importantes cobrados no desafio 04.
+- **ADR-002 - VITE_API_URL baked no build:** O React (Vite) compila variáveis de ambiente em arquivos estáticos. Não é possível injetar `VITE_API_URL` em runtime - ela precisa ser definida como `ARG` no Dockerfile e passada via `--build-arg` no momento do build.
+- **ADR-003 - ALB DNS como VITE_API_URL:** Usar o DNS do ALB garante que o frontend acesse a API via load balancer (alta disponibilidade), não via IP fixo de uma task específica.
+- **ADR-004 - RDS Single-AZ em lab:** Multi-AZ duplicaria o custo do RDS (~$0.034/h → ~$0.068/h) sem benefício real para um lab de curta duração. O PRD prevê `desired_count=2` para as tasks, não para o banco.
+- **ADR-005 - bia-dev em subnet pública:** Sem NAT Gateway neste desafio, a instância de build precisa de acesso à internet direto (subnet pública + public IP) para fazer pull do repo GitHub e push para ECR.
 
 Detalhes completos em [`ai/ADR/`](ai/ADR/).
 
@@ -79,7 +79,7 @@ Detalhes completos em [`ai/ADR/`](ai/ADR/).
 - Credenciais AWS configuradas (`aws sts get-caller-identity`)
 - Terraform >= 1.5 instalado
 - Python 3 + lib `diagrams` (`pip install diagrams`)
-- Variáveis sensíveis em `terraform/terraform.tfvars` (não commitado — use o `.example`)
+- Variáveis sensíveis em `terraform/terraform.tfvars` (não commitado - use o `.example`)
 
 ```bash
 cp terraform/terraform.tfvars.example terraform/terraform.tfvars
@@ -181,28 +181,13 @@ locals {
 | Outros (EBS, CloudWatch, ECR) | ~$0.02 | sessão ~3h |
 | **Total apurado** | **~$0.23** | **~3h** |
 
-> Dados do Cost Explorer disponíveis em 24-48h após o destroy.
-Detalhes em [`docs/CUSTOS.md`](docs/CUSTOS.md).
-
----
-
-## 🤖 Perguntas Sugeridas ao Kiro
-
-Veja [`docs/KIRO_PERGUNTAS.md`](docs/KIRO_PERGUNTAS.md). Destaques:
-
-1. Liste todos os recursos com `Challenge=mai2026-desafio-02` e estado atual
-2. Quanto custou o desafio nas últimas 24h por serviço?
-3. Algum Security Group permite 0.0.0.0/0 fora das portas 80/443?
-4. Após `terraform destroy`, confirme ausência de órfãos (EBS, EIP, snapshots)
-5. Existem tasks ECS em estado STOPPED com erro? Qual o motivo?
-
 ---
 
 ## 🎓 Lições Aprendidas
 
-- **VITE_API_URL não é variável de runtime:** O Vite compila tudo em arquivos estáticos — a URL da API vira literal no bundle JS. Reconstruir a imagem ao mudar o endpoint é obrigatório.
+- **VITE_API_URL não é variável de runtime:** O Vite compila tudo em arquivos estáticos - a URL da API vira literal no bundle JS. Reconstruir a imagem ao mudar o endpoint é obrigatório.
 - **ECS EC2 vs Fargate:** No EC2 launch type, você gerencia as instâncias do cluster (ASG + Capacity Provider). O ECS agent em cada EC2 registra a instância no cluster e executa as tasks. Fargate abstrai isso completamente.
-- **awsvpc no EC2 launch type:** Cada task recebe uma ENI própria — por isso o SG das tasks (`bia-ecs-tasks-02`) precisa aceitar tráfego do ALB diretamente, não do SG das instâncias.
+- **awsvpc no EC2 launch type:** Cada task recebe uma ENI própria - por isso o SG das tasks (`bia-ecs-tasks-02`) precisa aceitar tráfego do ALB diretamente, não do SG das instâncias.
 - **RDS tem lag de provisionamento:** O `terraform apply` leva 8-12 min principalmente por causa do RDS. Planejar a janela de execução para não ultrapassar o orçamento.
 - **Capacity Provider e ASG:** O ECS gerencia o scale-in/out das EC2 via Capacity Provider. `managed_termination_protection = DISABLED` é necessário em lab para o destroy funcionar sem travar.
 
@@ -210,11 +195,11 @@ Veja [`docs/KIRO_PERGUNTAS.md`](docs/KIRO_PERGUNTAS.md). Destaques:
 
 ## 📈 Status do Desafio
 
-- [x] F1 — Briefing & Design
-- [x] F2 — Provisionamento IaC (terraform apply: 45 recursos)
-- [x] F3 — Build BIA + Push ECR + Migrations + Force Deploy
-- [x] F4 — Smoke test 200 OK + Prints coletados
-- [x] F5 — README + Diagrama + Slides + Kiro + Blog + PROJECTS.md
+- [x] F1 - Briefing & Design
+- [x] F2 - Provisionamento IaC (terraform apply: 45 recursos)
+- [x] F3 - Build BIA + Push ECR + Migrations + Force Deploy
+- [x] F4 - Smoke test 200 OK + Prints coletados
+- [x] F5 - README + Diagrama + Slides + Kiro + Blog + PROJECTS.md
 
 ---
 
@@ -239,6 +224,6 @@ Distribuído sob a licença **Apache 2.0**. Veja [LICENSE](../LICENSE) na raiz.
     Desafio 02 de 6 · Trilha
     <strong>Conectividade e Redes na AWS</strong>
     · Mentoria
-    <a href="https://hotmart.com/pt-br/club/formacaoaws">Formação AWS 5.0 — Henrylle Maia</a>
+    <a href="https://hotmart.com/pt-br/club/formacaoaws">Formação AWS 5.0 - Henrylle Maia</a>
   </sub>
 </div>

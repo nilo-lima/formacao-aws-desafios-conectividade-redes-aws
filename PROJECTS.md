@@ -1,4 +1,4 @@
-# 📊 Dashboard de Progresso — Mai/2026
+# 📊 Dashboard de Progresso - Mai/2026
 
 > **Mês:** Maio 2026 · **Trilha:** Conectividade e Redes na AWS
 > **Carga estimada total:** 4 dias, 13h35m de estudos
@@ -23,7 +23,7 @@
 
 ## 📋 Detalhamento dos Desafios
 
-### ✅ Desafio 01 — VPC + Subnet Pública
+### ✅ Desafio 01 - VPC + Subnet Pública
 
 - **Pasta:** [`desafio_01_vpc/`](./desafio_01_vpc/)
 - **Nível:** ⭐ (1/3)
@@ -35,7 +35,7 @@
 - **Custo real:** ~$0.03 (sessão ~2h)
 - **Repositório:** [formacao-aws-desafios-conectividade-redes-aws](https://github.com/nilo-lima/formacao-aws-desafios-conectividade-redes-aws)
 
-### ✅ Desafio 02 — VPC + Subnet Pública + ECS
+### ✅ Desafio 02 - VPC + Subnet Pública + ECS
 
 - **Pasta:** [`desafio_02_ecs_publico/`](./desafio_02_ecs_publico/)
 - **Nível:** ⭐⭐ (2/3)
@@ -48,7 +48,7 @@
 - **Recursos provisionados:** 45 (terraform apply)
 - **Destaques:** ECS EC2 launch type + Capacity Provider + ASG + ALB + RDS + patch VITE_API_URL
 
-### 🟡 Desafio 03 — EC2 + SSH + SSM + Instance Connect
+### 🟡 Desafio 03 - EC2 + SSH + SSM + Instance Connect
 
 - **Pasta:** [`desafio_03_ec2_ssm_ssh/`](./desafio_03_ec2_ssm_ssh/)
 - **Nível:** ⭐⭐ (2/3)
@@ -58,7 +58,7 @@
 - **Objetivo:** Conhecer modelos de conectividade EC2 e fluxo das informações.
 - **Status:** 🟡 Aguardando
 
-### 🟡 Desafio 04 — NAT Gateway
+### 🟡 Desafio 04 - NAT Gateway
 
 - **Pasta:** [`desafio_04_nat_gateway/`](./desafio_04_nat_gateway/)
 - **Nível:** ⭐⭐ (2/3)
@@ -68,7 +68,7 @@
 - **Objetivo:** BIA + ECS em subnet privada com saída via NAT Gateway.
 - **Status:** 🟡 Aguardando
 
-### 🟡 Desafio 05 — VPC + VPC Peering
+### 🟡 Desafio 05 - VPC + VPC Peering
 
 - **Pasta:** [`desafio_05_vpc_peering/`](./desafio_05_vpc_peering/)
 - **Nível:** ⭐⭐⭐ (3/3)
@@ -78,7 +78,7 @@
 - **Objetivo:** Comunicação entre regiões via VPC Peering.
 - **Status:** 🟡 Aguardando
 
-### 🟡 Desafio 06 — VPC Endpoint + SSM + Instance Connect
+### 🟡 Desafio 06 - VPC Endpoint + SSM + Instance Connect
 
 - **Pasta:** [`desafio_06_vpc_endpoint/`](./desafio_06_vpc_endpoint/)
 - **Nível:** ⭐⭐⭐ (3/3)
