@@ -1,0 +1,8 @@
+# Desafio 03: EC2 + SSH + SSM + Instance Connect
+# Stub — preencher se o desafio rodar BIA localmente
+services:
+  # bia:
+  #   image: henrylle/bia:latest
+  #   ports: ["3001:3001"]
+  #   environment:
+  #     - VITE_API_URL=http://localhost:3001

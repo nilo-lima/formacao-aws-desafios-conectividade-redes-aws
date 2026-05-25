@@ -1,0 +1,8 @@
+# Renomeie para terraform.tfvars e preencha (NAO COMMITAR - coberto pelo .gitignore)
+
+region                  = "us-east-1"
+public_key_path         = "~/.ssh/bia-lab-03.pub"      # Ed25519 para Linux
+windows_public_key_path = "~/.ssh/bia-lab-03-win.pub"  # RSA para Windows (obrigatorio)
+enable_windows          = true
+admin_cidr              = "0.0.0.0/0"                  # Restrinja ao seu IP em producao
+rds_password            = "TROCAR_SENHA_FORTE_MIN8"    # Sem / @ " ou espaco

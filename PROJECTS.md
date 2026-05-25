@@ -10,13 +10,13 @@
 
 | Status | Quantidade | % |
 |---|:---:|:---:|
-| ✅ Concluído | 2 | 33% |
+| ✅ Concluído | 3 | 50% |
 | 🔵 Em andamento | 0 | 0% |
-| 🟡 Aguardando | 4 | 67% |
+| 🟡 Aguardando | 3 | 50% |
 | ❌ Bloqueado | 0 | 0% |
 
 ```
-██████░░░░░░░░░░░░░░  2/6  (33%)
+██████████░░░░░░░░░░  3/6  (50%)
 ```
 
 ---
@@ -48,7 +48,7 @@
 - **Recursos provisionados:** 45 (terraform apply)
 - **Destaques:** ECS EC2 launch type + Capacity Provider + ASG + ALB + RDS + patch VITE_API_URL
 
-### 🟡 Desafio 03 - EC2 + SSH + SSM + Instance Connect
+### ✅ Desafio 03 - EC2 + SSH + SSM + Instance Connect
 
 - **Pasta:** [`desafio_03_ec2_ssm_ssh/`](./desafio_03_ec2_ssm_ssh/)
 - **Nível:** ⭐⭐ (2/3)
@@ -56,7 +56,10 @@
 - **Data limite do post:** 01/06/2026
 - **Carga estudo:** 22h22
 - **Objetivo:** Conhecer modelos de conectividade EC2 e fluxo das informações.
-- **Status:** 🟡 Aguardando
+- **Status:** ✅ Concluído (2026-05-24)
+- **Custo real:** ~$0,30 (sessão ~3h)
+- **Recursos provisionados:** 42 (terraform apply)
+- **Destaques:** 5 metodos de conectividade EC2 validados + Ed25519 incompativel com Windows AMIs (ADR-002)
 
 ### 🟡 Desafio 04 - NAT Gateway
 
@@ -96,7 +99,7 @@
 |---|---:|---:|:---:|
 | 01 | $0.03 | ~$0.03 | 2026-05-13 (~2h) |
 | 02 | $0.24 | ~$0.23 | 2026-05-15 (~3h) |
-| 03 | - | - | - |
+| 03 | $0,30 | ~$0,30 | 2026-05-24 (~3h) |
 | 04 | - | - | - |
 | 05 | - | - | - |
 | 06 | - | - | - |

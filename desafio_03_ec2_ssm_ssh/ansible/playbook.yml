@@ -1,0 +1,9 @@
+---
+# Playbook do Desafio 03: EC2 + SSH + SSM + Instance Connect
+- name: Configurar bia-dev
+  hosts: bia_dev
+  become: true
+  tasks:
+    - name: TODO — preencher após Fase 1
+      ansible.builtin.debug:
+        msg: "Placeholder"
