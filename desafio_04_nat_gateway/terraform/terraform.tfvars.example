@@ -1,0 +1,4 @@
+# Renomeie para terraform.tfvars e preencha. NAO COMMITAR este arquivo.
+region           = "us-east-1"
+challenge_number = "04"
+rds_password     = "TROCAR_SENHA_FORTE_MIN12CHARS"

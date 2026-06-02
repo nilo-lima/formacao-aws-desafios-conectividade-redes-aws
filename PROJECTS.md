@@ -10,13 +10,13 @@
 
 | Status | Quantidade | % |
 |---|:---:|:---:|
-| ✅ Concluído | 3 | 50% |
+| ✅ Concluído | 4 | 67% |
 | 🔵 Em andamento | 0 | 0% |
-| 🟡 Aguardando | 3 | 50% |
+| 🟡 Aguardando | 2 | 33% |
 | ❌ Bloqueado | 0 | 0% |
 
 ```
-██████████░░░░░░░░░░  3/6  (50%)
+█████████████░░░░░░░  4/6  (67%)
 ```
 
 ---
@@ -61,7 +61,7 @@
 - **Recursos provisionados:** 42 (terraform apply)
 - **Destaques:** 5 metodos de conectividade EC2 validados + Ed25519 incompativel com Windows AMIs (ADR-002)
 
-### 🟡 Desafio 04 - NAT Gateway
+### ✅ Desafio 04 - NAT Gateway + ECS Privado
 
 - **Pasta:** [`desafio_04_nat_gateway/`](./desafio_04_nat_gateway/)
 - **Nível:** ⭐⭐ (2/3)
@@ -69,7 +69,10 @@
 - **Data limite do post:** 08/06/2026
 - **Carga estudo:** 1d 3h59
 - **Objetivo:** BIA + ECS em subnet privada com saída via NAT Gateway.
-- **Status:** 🟡 Aguardando
+- **Status:** ✅ Concluído (2026-06-02)
+- **Custo real:** ~$0.22 (sessão ~3h)
+- **Recursos provisionados:** 33 (terraform apply)
+- **Destaques:** ECS Fargate assign_public_ip=false + NAT GW single + RDS privado + migrations via ECS run-task
 
 ### 🟡 Desafio 05 - VPC + VPC Peering
 
@@ -100,7 +103,7 @@
 | 01 | $0.03 | ~$0.03 | 2026-05-13 (~2h) |
 | 02 | $0.24 | ~$0.23 | 2026-05-15 (~3h) |
 | 03 | $0,30 | ~$0,30 | 2026-05-24 (~3h) |
-| 04 | - | - | - |
+| 04 | $0.22 | ~$0.22 | 2026-06-02 (~3h) |
 | 05 | - | - | - |
 | 06 | - | - | - |
 | **Total** | **-** | **-** | - |

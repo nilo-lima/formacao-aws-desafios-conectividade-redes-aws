@@ -1,0 +1,9 @@
+---
+# Playbook do Desafio 04: NAT Gateway + ECS Privado
+- name: Configurar bia-dev
+  hosts: bia_dev
+  become: true
+  tasks:
+    - name: TODO — preencher após Fase 1
+      ansible.builtin.debug:
+        msg: "Placeholder"
