@@ -10,13 +10,13 @@
 
 | Status | Quantidade | % |
 |---|:---:|:---:|
-| ✅ Concluído | 5 | 83% |
+| ✅ Concluído | 6 | 100% |
 | 🔵 Em andamento | 0 | 0% |
-| 🟡 Aguardando | 1 | 17% |
+| 🟡 Aguardando | 0 | 0% |
 | ❌ Bloqueado | 0 | 0% |
 
 ```
-████████████████░░░  5/6  (83%)
+████████████████████  6/6  (100%)
 ```
 
 ---
@@ -87,15 +87,18 @@
 - **Recursos provisionados:** 22 (terraform apply)
 - **Destaques:** Dual-provider Terraform + VPC Peering cross-region + aceitacao automatica via `aws_vpc_peering_connection_accepter` + 3 smoke tests (SSH externo, ping via peering, SSH via peering)
 
-### 🟡 Desafio 06 - VPC Endpoint + SSM + Instance Connect
+### ✅ Desafio 06 - VPC Endpoint + SSM + Instance Connect
 
 - **Pasta:** [`desafio_06_vpc_endpoint/`](./desafio_06_vpc_endpoint/)
-- **Nível:** ⭐⭐⭐ (3/3)
-- **Categoria:** Não linear
+- **Nivel:** 3/3
+- **Categoria:** Nao linear
 - **Data limite do post:** 08/06/2026
 - **Carga estudo:** 7h29
-- **Objetivo:** Acesso seguro à VPC com SSM + VPC Endpoint + EC2 Instance Connect.
-- **Status:** 🟡 Aguardando
+- **Objetivo:** EC2 em subnet 100% privada gerenciada via SSM Session Manager e EC2 Instance Connect Endpoint, sem NAT Gateway e sem IP publico.
+- **Status:** ✅ Concluído (2026-06-08)
+- **Custo real:** ~$0.10 (sessao ~2h)
+- **Recursos provisionados:** 18 (terraform apply)
+- **Destaques:** VPC somente privada + 5 VPC Endpoints (3 SSM Interface + EIC + S3 Gateway) + SSH_AUTH_SOCK="" fix para EIC
 
 ---
 
@@ -108,7 +111,7 @@
 | 03 | $0,30 | ~$0,30 | 2026-05-24 (~3h) |
 | 04 | $0.22 | ~$0.22 | 2026-06-02 (~3h) |
 | 05 | $0.06 | ~$0.06 | 2026-06-08 (~2h) |
-| 06 | - | - | - |
+| 06 | $0.10 | ~$0.10 | 2026-06-08 (~2h) |
 | **Total** | **-** | **-** | - |
 
 > Atualizado por `make cost-report` ao final de cada desafio.
