@@ -1,0 +1,11 @@
+# Renomeie para terraform.tfvars e preencha (NAO COMMITAR - esta coberto pelo .gitignore)
+
+challenge_number = "05"
+
+# Obtenha seu IP publico: curl -s https://ipv4.icanhazip.com
+# Recomendado: substituir por "SEU_IP/32" para restringir SSH
+admin_cidr = "0.0.0.0/0"
+
+# Cole o conteudo de: cat ~/.ssh/id_rsa.pub
+# Ou gere uma chave nova: ssh-keygen -t rsa -b 4096 -f ~/.ssh/bia-05
+public_key = "ssh-rsa AAAA... seu-email@exemplo.com"

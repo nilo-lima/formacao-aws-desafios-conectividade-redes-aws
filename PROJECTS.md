@@ -10,13 +10,13 @@
 
 | Status | Quantidade | % |
 |---|:---:|:---:|
-| ✅ Concluído | 4 | 67% |
+| ✅ Concluído | 5 | 83% |
 | 🔵 Em andamento | 0 | 0% |
-| 🟡 Aguardando | 2 | 33% |
+| 🟡 Aguardando | 1 | 17% |
 | ❌ Bloqueado | 0 | 0% |
 
 ```
-█████████████░░░░░░░  4/6  (67%)
+████████████████░░░  5/6  (83%)
 ```
 
 ---
@@ -74,15 +74,18 @@
 - **Recursos provisionados:** 33 (terraform apply)
 - **Destaques:** ECS Fargate assign_public_ip=false + NAT GW single + RDS privado + migrations via ECS run-task
 
-### 🟡 Desafio 05 - VPC + VPC Peering
+### ✅ Desafio 05 - VPC + VPC Peering
 
 - **Pasta:** [`desafio_05_vpc_peering/`](./desafio_05_vpc_peering/)
 - **Nível:** ⭐⭐⭐ (3/3)
 - **Categoria:** Linear
 - **Data limite do post:** 08/06/2026
 - **Carga estudo:** 12h29
-- **Objetivo:** Comunicação entre regiões via VPC Peering.
-- **Status:** 🟡 Aguardando
+- **Objetivo:** Comunicacao cross-region entre us-east-1 e us-east-2 via VPC Peering.
+- **Status:** ✅ Concluído (2026-06-08)
+- **Custo real:** ~$0.06 (sessao ~2h)
+- **Recursos provisionados:** 22 (terraform apply)
+- **Destaques:** Dual-provider Terraform + VPC Peering cross-region + aceitacao automatica via `aws_vpc_peering_connection_accepter` + 3 smoke tests (SSH externo, ping via peering, SSH via peering)
 
 ### 🟡 Desafio 06 - VPC Endpoint + SSM + Instance Connect
 
@@ -104,7 +107,7 @@
 | 02 | $0.24 | ~$0.23 | 2026-05-15 (~3h) |
 | 03 | $0,30 | ~$0,30 | 2026-05-24 (~3h) |
 | 04 | $0.22 | ~$0.22 | 2026-06-02 (~3h) |
-| 05 | - | - | - |
+| 05 | $0.06 | ~$0.06 | 2026-06-08 (~2h) |
 | 06 | - | - | - |
 | **Total** | **-** | **-** | - |
 

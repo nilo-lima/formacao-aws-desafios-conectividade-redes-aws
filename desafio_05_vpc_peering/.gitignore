@@ -1,0 +1,34 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+
+# tfvars (senhas) — só o exemplo vai pro Git
+*.tfvars
+!*.tfvars.example
+
+# Secrets
+.env
+*.pem
+*.key
+
+# Python diagrams (dot temporary)
+*.dot
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Ansible
+*.retry
+
+# Logs
+*.log
